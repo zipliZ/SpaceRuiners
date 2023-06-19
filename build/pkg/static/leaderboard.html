@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Leaderboard</title>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <style>
+        body {
+            text-align: center;
+        }
+        div {
+            font-size: 40px;
+        }
+        table {
+            margin: 0 auto;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body text="#7fffd4">
+    <div>List of Leaders</div>
+    <table width="50%">
+        <thead><th>Name</th><th>Score</th></thead>
+        {{range . }}
+        <tr>
+            <td width="25%">{{.Name}}</td>
+            <td width="25%">{{.Score}}</td>
+        </tr>
+        {{end}}
+    </table>
+</body>
+</html>
